@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Сайт ЖКХ</title>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/fancybox.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+
+
+
+
+<div id="main-overlay" class="main-overlay"></div>
+<aside id="mobile-sidebar" class="mobile-sidebar">
+    <span class="search-mobile">
+        <form id="search-mobile" class="search-mobile__form">
+            <input type="search" placeholder="Поиск">
+            <button type="submit" id="search_mobile-button" class="icon icon-search"></button>
+        </form>
+    </span>
+    <span id="mobile-exit" class="mobile-menu__exit-button">
+        <span></span>
+        <span></span>
+    </span>
+    <nav id="mobile-menu" class="mobile-menu" role="navigation">
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__menu-item _parent menu-item_lvl-1"><a href="#">Компания</a>
+                <ul class="mobile-menu__submenu">
+                    <li class="mobile-menu__back-link back-link_lvl-1">
+                        <a href="#">Назад</a>
+                    </li>
+                    <li class="mobile-menu__menu-item _parent menu-item_lvl-2"><a href="#">О компании</a>
+                        <ul class="mobile-menu__submenu">
+                            <li class="mobile-menu__back-link back-link_lvl-2">
+                                <a href="#">Назад</a>
+                            </li>
+                            <li><a href="#">О компании lvl-2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu__menu-item _parent menu-item_lvl-1"><a href="#">Дома</a>
+                <ul class="mobile-menu__submenu">
+                    <li class="mobile-menu__back-link back-link_lvl-1">
+                        <a href="#">Назад</a>
+                    </li>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Фотогалерия</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">Должники</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu__menu-item _parent menu-item_lvl-1"><a href="#">Документы и отчетность</a>
+                <ul class="mobile-menu__submenu">
+                    <li class="mobile-menu__back-link back-link_lvl-1">
+                        <a href="#">Назад</a>
+                    </li>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">Обсновые показатели финансово-хозяйственной деятельности</a></li>
+                    <li><a href="#">Сведения о выполняемых работах</a></li>
+                    <li><a href="#">Порядок и условия оказания услуг</a></li>
+                    <li><a href="#">Сведения о стоимости работ</a></li>
+                    <li><a href="#">Тарифы на коммунальные ресурсы</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu__menu-item _parent menu-item_lvl-1"><a href="#">Личный кабинет</a>
+                <ul class="mobile-menu__submenu">
+                    <li class="mobile-menu__back-link back-link_lvl-1">
+                        <a href="#">Назад</a>
+                    </li>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">История начислений о оплат</a></li>
+                    <li><a href="#">Квитанция на оплату коммунальных услуг</a></li>
+                    <li><a href="#">Данные счетчиков</a></li>
+                    <li><a href="#">Оплатить услуги через сайт</a></li>
+                    <li><a href="#">Мои заявки</a></li>
+                    <li><a href="#">Управление подпиской</a></li>
+                    <li><a href="#">Графики</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu__menu-item"><a href="#">Вопрос-ответ</a></li>
+        </ul>
+    </nav>
+</aside>
+
+
+<div id="header-wrap">
+    <div class="container">
+        <header class="header">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-6 order-lg-1">
+                    <a href="#" class="brand">
+                        <span class="brand__img">
+                            <img src="images/logo.png" alt="logo">
+                        </span>
+                        <span class="brand__text">УК Жилком</span>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-3  col-sm-3 col-6 order-lg-2 order-md-3 order-sm-3">
+                    <span class="search">
+                        <form id="search" class="search__form">
+                            <input type="search" placeholder="Поиск">
+                            <button type="submit" id="search_button" class="icon icon-search"></button>
+                        </form>
+                        <span class="search__examples">
+                            <span>Например:</span>
+                            <a href="#">Об УК</a>
+                            <a href="#">Должники</a>
+                            <a href="#">Новости</a>
+                        </span>
+                    </span>
+                    <span class="header-icons">
+                        <a href="#" class="header-icons__call-order icon icon-phone"></a>
+                        <div class="header-icons__menu-toggle" id="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </span>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-12 order-lg-3 order-md-2 order-sm-2 d-none d-sm-block">
+                    <span class="phones">
+                        <a href="tel:+78362304009" class="phones__number icon icon-phone">8 836 230-40-09</a>
+                        <a href="tel:+78362304009" class="phones__number icon icon-phone">8 836 230-40-09</a>
+                        <a href="#" class="phones__call-order">Заказать звонок</a>
+                    </span>
+                </div>
+                <div class="col-12 order-4">
+                    <nav id="main-menu" class="main-menu" role="navigation">
+                        <ul id="menu-list" class="main-menu__list">
+                            <li class="main-menu__menu-item _parent menu-item_lvl-1"><a href="#">Компания</a>
+                                <ul class="main-menu__submenu submenu_lvl-1">
+                                    <li class="main-menu__menu-item _parent menu-item_lvl-2"><a href="#">О компании</a>
+                                        <ul class="main-menu__submenu submenu_lvl-2">
+                                            <li><a href="#">О компании lvl-2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__menu-item _parent_lvl-1"><a href="#">Дома</a>
+                                <ul class="main-menu__submenu submenu_lvl-1">
+                                    <li><a href="#">Общая информация</a></li>
+                                    <li><a href="#">Блог</a></li>
+                                    <li><a href="#">Форум</a></li>
+                                    <li><a href="#">Фотогалерия</a></li>
+                                    <li><a href="#">Видео</a></li>
+                                    <li><a href="#">Должники</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__menu-item _parent"><a href="#">Документы и отчетность</a>
+                                <ul class="main-menu__submenu submenu_lvl-1">
+                                    <li><a href="#">Общая информация</a></li>
+                                    <li><a href="#">Обсновые показатели финансово-хозяйственной деятельности</a></li>
+                                    <li><a href="#">Сведения о выполняемых работах</a></li>
+                                    <li><a href="#">Порядок и условия оказания услуг</a></li>
+                                    <li><a href="#">Сведения о стоимости работ</a></li>
+                                    <li><a href="#">Тарифы на коммунальные ресурсы</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__menu-item _parent"><a href="#">Личный кабинет</a>
+                                <ul class="main-menu__submenu submenu_lvl-1">
+                                    <li><a href="#">Общая информация</a></li>
+                                    <li><a href="#">История начислений о оплат</a></li>
+                                    <li><a href="#">Квитанция на оплату коммунальных услуг</a></li>
+                                    <li><a href="#">Данные счетчиков</a></li>
+                                    <li><a href="#">Оплатить услуги через сайт</a></li>
+                                    <li><a href="#">Мои заявки</a></li>
+                                    <li><a href="#">Управление подпиской</a></li>
+                                    <li><a href="#">Графики</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__menu-item"><a href="#">Вопрос-ответ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>

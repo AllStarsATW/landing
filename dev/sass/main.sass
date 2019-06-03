@@ -1,0 +1,36 @@
+@import colors
+
+
+body
+  background-color: $white
+  font-family: 'Roboto', 'Open Sans', 'Geneva', sans-serif
+  height: 5000px
+h1
+  font-size: 28px
+h2
+  font-size: 24px
+h3
+  font-size: 20px
+h4
+  font-size: 16px
+.icon
+  &::before
+    display: inline-block
+    font-style: normal
+    font-variant: normal
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+  &-search::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f002"
+  &-person::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f007"
+  &-phone::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f095"
+
+@import header
