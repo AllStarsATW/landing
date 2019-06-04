@@ -184,15 +184,16 @@
   padding: 15px 0
   width: 100%
   outline: none
-
-  &__img
+  height: 100%
+  &::before
+    content: ''
     display: inline-block
-    float: left
-    min-width: 80px
-    max-width: 200px
-    width: 200px
-    & img
-      width: 100%
+    width: 40px
+    height: 40px
+    border: 10px solid $accent-first
+    border-radius: 50%
+    margin: -4px 10px 0 0
+    background-color: $block-bg
   &:hover
     text-decoration: none
   &__text
@@ -201,8 +202,8 @@
     float: left
     font-size: 32px
     line-height: 32px
-    font-weight: 500
-    color: $accent-second
+    font-weight: 700
+    color: $accent-first
 
 .search
   display: flex
