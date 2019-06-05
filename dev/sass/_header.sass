@@ -1,20 +1,13 @@
 .header
   display: block
-  &:before
+  padding: 15px 0
+  &:after
     background-color: $accent-first
     right: 0
     left: 0
     height: 1px
     content: ''
-    position: absolute
-    z-index: -2
-  &:after
-    background-color: $accent-first
-    right: 0
-    left: 0
-    margin-top: -44px
-    height: 44px
-    content: ''
+    margin-top: 15px
     position: absolute
     z-index: -2
   &-faded
@@ -181,7 +174,6 @@
 .brand
   display: flex
   align-items: center
-  padding: 15px 0
   width: 100%
   outline: none
   height: 100%
@@ -200,58 +192,12 @@
     display: inline-block
     white-space: pre-wrap
     float: left
-    font-size: 32px
+    font-size: 24px
     line-height: 32px
     font-weight: 700
     color: $accent-first
 
-.search
-  display: flex
-  align-items: center
-  flex-direction: column
-  justify-content: center
-  height: 100%
-  width: 100%
-  padding: 15px 0
-  &__form
-    width: 100%
-    & > button
-      cursor: pointer
-      outline: none
-      padding: 0
-      line-height: normal
-      width: 40px
-      height: 40px
-      margin-left: -5px
-      border: none
-      border-radius: 0 5px 5px 0
-      background-color: $block-bg
-      color: $accent-second
-    & > input
-      display: inline-block
-      cursor: pointer
-      outline: none
-      padding: 0 10px
-      height: 40px
-      width: calc(100% - 40px)
-      border-radius: 5px 0 0 5px
-      border: none
-      color: $accent-second
-      background-color: $block-bg
-  &__examples
-    display: block
-    width: 100%
-    color: $accent-second
-    font-size: 14px
-    & > span
-      font-size: 14px
-      font-weight: 500
-    & > a
-      color: $accent-second
-      &:after
-        content: ','
-      &:last-child:after
-        content: ''
+
 .header-icons
   display: none
   align-items: center
@@ -292,121 +238,57 @@
       border: 1px solid $accent-first
       & > span
         background: $white
-.phones
-  display: flex
-  align-items: flex-end
-  justify-content: center
-  flex-direction: column
-  height: 100%
-  width: 100%
-  padding: 15px 0
-  &__number
-    text-decoration: none
-    font-weight: 500
-    font-size: 18px
-    line-height: 18px
-    color: $accent-second
-    &:hover
-      text-decoration: none
-      color: $accent-second
-    &::before
-      color: $white
-      background-color: $accent-first
-      padding: 5px 5px
-      margin-right: 5px
-      font-size: 16px
-      margin-bottom: 5px
-  &__call-order
-    font-size: 14px
-    display: block
-    color: $accent-second
-    margin-top: -10px
-    &:hover
-      text-decoration: none
-      color: $accent-first
-
 
 .main-menu
   display: flex
   align-items: center
-  height: 44px
+  height: 100%
+  width: 100%
   &__list
     display: flex
     margin: 0
     padding: 0
     list-style: none
-    width: 100%
+  &__list > li+li
+    margin-left: 10px
   &__list > li
     position: relative
     flex-basis: auto
     flex-grow: 1
     text-align: center
+    & > a::after
+      content: ''
+      width: 100%
+      height: 2px
+      display: block
+      position: absolute
+      margin-top: 3px
+      background-image: linear-gradient($accent-first, $accent-first)
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: 0% 100%
+      transition: background-size .5s, color .5s
+    &:hover > a::after
+      background-size: 100% 100%
   &__list > li > a
     display: block
+    color: $accent-first
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 14px
+    text-decoration: none
+.register
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  &__button
+    background-color: $accent-second
     color: $white
-    background-color: $accent-first
-    font-weight: 500
-    padding: 10px
-    &:hover
-      background-color: $accent-first_hover
-      text-decoration: none
-  &__list > li:hover > .main-menu__submenu
-    opacity: 1
-    overflow: visible
-    height: 100%
-  &__menu-item.menu-item_lvl-2
-    & > a::after
-      display: inline-block
-      font-style: normal
-      font-variant: normal
-      text-rendering: auto
-      -webkit-font-smoothing: antialiased
-      font-family: "Font Awesome 5 Free"
-      font-weight: 900
-      content: "\f105"
-      font-size: 20px
-      float: right
-      line-height: 22px
-    & > .main-menu__submenu
-      list-style: none
-      padding: 0
-      margin: 0
-      position: absolute
-      overflow: hidden
-      width: calc(100% + 30px)
-      left: 100%
-      top: 0
-      transition: all .2s ease-in
-      opacity: 0
-      height: 0
-    &:hover > .main-menu__submenu
-      opacity: 1
-      overflow: visible
-      height: 100%
-  &__submenu
-    list-style: none
-    padding: 0
-    margin: 0
-    position: absolute
-    overflow: hidden
-    width: calc(100% + 30px)
-    transition: all .2s ease-in
-    opacity: 0
-    height: 0
-    & > li
-      display: block
-      & > a
-        display: block
-        text-decoration: none
-        padding: 10px 20px
-        color: $block-bg_hover
-        background-color: $block-bg
-        font-weight: 500
-        text-align: left
-        &:hover
-          text-decoration: none
-          background-color: $accent-first_hover
-          color: $white
+
+
+
 
 
 
