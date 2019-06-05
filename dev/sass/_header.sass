@@ -198,46 +198,9 @@
     color: $accent-first
 
 
-.header-icons
-  display: none
-  align-items: center
-  flex-direction: row
-  justify-content: flex-end
-  height: 100%
-  width: 100%
-  padding: 15px 0
-  &__call-order
-    background-color: $accent-first
-    color: $white
-    margin-right: 10px
-    font-size: 20px
-    padding: 5px 10px
-    &:hover
-      color: $white
-  &__menu-toggle
-    display: block
-    position: relative
-    z-index: 1
-    user-select: none
-    border: 1px solid $block-bg_hover
-    background-color: $white
-    padding: 8px 4px
-    & span
-      display: block
-      position: relative
-      border-radius: 3px
-      z-index: 1
-      background: $block-bg_hover
-      width: 30px
-      height: 4px
-      margin-bottom: 5px
-      &:last-child
-        margin-bottom: 0
-    &:hover
-      background-color: $accent-first
-      border: 1px solid $accent-first
-      & > span
-        background: $white
+
+
+
 
 .main-menu
   display: flex
@@ -277,6 +240,36 @@
     font-weight: 600
     font-size: 14px
     text-decoration: none
+  &__toggle
+    display: none
+    position: relative
+    z-index: 1
+    user-select: none
+    border: 1px solid $block-bg_hover
+    background-color: $white
+    padding: 8px 4px
+    cursor: pointer
+    & span
+      display: block
+      position: relative
+      border-radius: 3px
+      z-index: 1
+      background: $block-bg_hover
+      width: 30px
+      height: 4px
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+    &:hover
+      background-color: $accent-first
+      border: 1px solid $accent-first
+      & > span
+        background: $white
+
+
+
+
+
 .register
   width: 100%
   height: 100%

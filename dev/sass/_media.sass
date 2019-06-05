@@ -1,32 +1,17 @@
-@media screen and (min-width: 1200px)
-  .test
-    display: none
 @media screen and (max-width: 1200px)
-  .test
-    display: none
-@media screen and (max-width: 992px)
-  .header
-    &:after
-      height: 1px
-      margin-top: 0
-  .search
-    display: none
-  .header-icons
-    display: flex
+  .main-menu
+    &__list
+      display: none
+    &__toggle
+      display: block
   .brand
-    &__img
-      max-width: 180px
+    justify-content: center
+@media screen and (max-width: 992px)
+  .brand
     &__text
       font-size: 26px
       line-height: 26px
       font-weight: 600
-  .phones
-    &__call-order
-      display: none
-  .main-menu
-    height: 0
-    &__list
-      display: none
 @media screen and (max-width: 768px)
   .brand
     &__img
@@ -45,9 +30,9 @@
       margin-bottom: 0
 @media screen and (max-width: 576px)
   .brand
-    &__img
-      max-width: 140px
     &__text
       font-size: 22px
       line-height: 22px
       font-weight: 500
+  .brand
+    justify-content: flex-start
