@@ -1,3 +1,20 @@
 //= ./template/header.html
+<div class="slider">
+    <div><img src="images/conference-showcase-sdh.jpg" alt=""></div>
+    <div><img src="images/conference-showcase-sdh.jpg" alt=""></div>
+    <div><img src="images/conference-showcase-sdh.jpg" alt=""></div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.slider').bxSlider({
+            auto: true,
+            responsive: true,
+            autoControls: true,
+            autoControlsCombine: true,
+            captions: true,
+            adaptiveHeight: true
+        });
+    });
+</script>
 
 //= ./template/footer.html
