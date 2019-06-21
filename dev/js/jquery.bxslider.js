@@ -60,8 +60,8 @@
     nextSelector: null,
     prevSelector: null,
     autoControls: false,
-    startText: 'Start',
-    stopText: 'Stop',
+    startText: '',
+    stopText: '',
     autoControlsCombine: false,
     autoControlsSelector: null,
 
