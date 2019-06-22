@@ -1,11 +1,28 @@
 //= ./template/header.html
 <div class="one-screen">
     <div class="main-slider">
-        <div class="container-fluid">
-            <div class="row">
-                <div><img src="images/conference-showcase-sdh.jpg" alt=""></div>
+        <div class="main-slider_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="red">123 <br> asasd</div>
+                </div>
             </div>
         </div>
+        <div class="main-slider_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="green">123 <br> asasd</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="blue">123 <br> asasd</div>
+                </div>
+            </div>
+        </div>
+
 <!--        <div class="container-fluid">-->
 <!--            <div class="row">-->
 <!--                <div><img src="images/conference-showcase-sdh.jpg" alt=""></div>-->
@@ -31,7 +48,7 @@
     $(document).ready(function(){
         $('.main-slider').bxSlider({
             mode: 'vertical',
-            auto: true,
+            adaptiveHeight: false,
             autoControls: true,
             autoControlsCombine: true,
             captions: true
