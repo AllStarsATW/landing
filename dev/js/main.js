@@ -47,5 +47,30 @@ $(document).ready(function() {
 
 
 
+    const slider = $(".main-slider");
+    slider
+        .slick({
+            dots: true,
+            arrows: false,
+            dotsClass: 'slick-dots',
+            draggable: false,
+            verticalSwiping: true,
+            speed: 300,
+            slidesToShow: 1,
+            vertical: true
+        });
+
+    slider.on('wheel', (function(e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickPrev');
+        } else {
+            $(this).slick('slickNext');
+        }
+    }));
+
+
+
 
 });
