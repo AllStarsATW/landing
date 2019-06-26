@@ -52,7 +52,7 @@ $(document).ready(function() {
         .slick({
             dots: true,
             arrows: false,
-            dotsClass: 'slick-dots',
+            dotsClass: 'main-slider__dots',
             draggable: false,
             verticalSwiping: true,
             speed: 300,
