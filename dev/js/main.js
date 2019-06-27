@@ -46,7 +46,11 @@ $(document).ready(function() {
     });
 
 
-
+    const sliderMenu = new Array();
+    var elements = document.getElementsByClassName('main-slider__section');
+    for (i = 0; i < elements.length; i++) {
+        sliderMenu[i] = elements[i].title;
+    }
     const slider = $(".main-slider");
     slider
         .slick({
@@ -70,7 +74,11 @@ $(document).ready(function() {
         }
     }));
 
-
-
+    var ul = document.getElementsByClassName('main-slider__dots');
+    console.log(ul);
+    var div = document.getElementById('main-slider');
+    console.log(div);
+    var elems = div.getElementsByTagName('button');
+    console.log(elems);
 
 });
