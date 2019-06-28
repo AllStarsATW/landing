@@ -47,16 +47,17 @@ $(document).ready(function() {
 
 
     const sliderMenu = new Array();
-    var elements = document.getElementsByClassName('main-slider__section');
-    for (i = 0; i < elements.length; i++) {
-        sliderMenu[i] = elements[i].title;
+    var sliderElements = document.getElementsByClassName('main-slider__section');
+    for (i = 0; i < sliderElements.length; i++) {
+        sliderMenu[i] = sliderElements[i].title;
     }
     const slider = $(".main-slider");
     slider
         .slick({
             dots: true,
             arrows: false,
-            dotsClass: 'main-slider__dots',
+            dotsClass: 'main-menu__list',
+            appendDots: $(".main-menu"),
             draggable: false,
             verticalSwiping: true,
             speed: 300,
@@ -74,11 +75,13 @@ $(document).ready(function() {
         }
     }));
 
-    var ul = document.getElementsByClassName('main-slider__dots');
-    console.log(ul);
-    var div = document.getElementById('main-slider');
-    console.log(div);
-    var elems = div.getElementsByTagName('button');
-    console.log(elems);
-
+    var sliderDots = document.getElementsByClassName('main-menu');
+    // console.log(sliderDots[0]);
+    var sliderDotsButtons = sliderDots[0].getElementsByTagName('button');
+    // console.log(sliderDotsButtons);
+    for (i = 0; i < sliderElements.length; i++) {
+        sliderDotsButtons[i].innerHTML = sliderMenu[i];
+        console.log('Должно быть присвоено:', sliderMenu[i]);
+        console.log(sliderDotsButtons[i]);
+    }
 });

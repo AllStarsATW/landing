@@ -50,34 +50,30 @@ h4
   & div
     height: 100vh
     min-height: 100vh
-  &__dots
-    position: absolute
-    left: 20px
-    height: 100%
-    top: 0
-    display: flex
-    flex-direction: column
-    justify-content: center
-    margin: 0
-    padding: 0
-    & > li
-      list-style-type: none
-      margin-bottom: 10px
-      & > button
-        display: none
-      &::after
-        content: ''
-        display: block
-        cursor: pointer
-        width: 7px
-        height: 7px
-        border: 1px solid #FFF
-        border-radius: 50%
-        background-color: black
-    & .slick-active
-      &::after
-        background-color: red
-        border: 1px solid red
+.main-menu__list
+  position: absolute
+  left: 20px
+  height: 100%
+  top: 0
+  display: flex
+  justify-content: center
+  margin: 0
+  padding: 0
+  & > li
+    list-style-type: none
+    margin-bottom: 10px
+    & > button
+      display: block
+      background-color: transparent
+      border: none
+      outline: none
+      margin: 0
+      padding: 0
+      &:active
+        border: none
+  & .slick-active
+    & > button
+      color: red
 .slick-vertical .slick-slide
   border: 0
 .slick-dotted.slick-slider
@@ -88,9 +84,6 @@ h4
   background-color: blue
 .green
   background-color: green
-.third
-  position: absolute
-  top: 0
-  right: 0
+
 
 

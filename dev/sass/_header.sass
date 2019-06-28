@@ -1,3 +1,17 @@
+.main-overlay
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 900
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: none
+  background: rgba(0, 0, 0, 0.7)
+  pointer-events: all
+  &.i-active
+    display: block
 .header
   padding: 15px 0
   display: block
@@ -24,20 +38,125 @@
     width: 100%
     transform: translate(0, 0)
     transition: all .1s ease-in
-.main-overlay
-  position: fixed
+.brand
+  display: flex
+  align-items: center
+  width: 100%
+  outline: none
+  height: 100%
+  &::before
+    content: ''
+    display: inline-block
+    width: 40px
+    height: 40px
+    border: 10px solid $accent-first
+    border-radius: 50%
+    margin: -4px 10px 0 0
+    background-color: $block-bg
+  &:hover
+    text-decoration: none
+  &__text
+    display: inline-block
+    white-space: pre-wrap
+    float: left
+    font-size: 24px
+    line-height: 32px
+    font-weight: 700
+    color: $accent-first
+
+
+
+
+
+
+.main-menu
+  display: flex
+  align-items: center
+  height: 100%
+  width: 100%
+  &__list
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+  &__list > li+li
+    margin-left: 10px
+  &__list > li
+    position: relative
+    flex-basis: auto
+    flex-grow: 1
+    text-align: center
+    & > a::after
+      content: ''
+      width: 100%
+      height: 2px
+      display: block
+      position: absolute
+      margin-top: 3px
+      background-image: linear-gradient($accent-first, $accent-first)
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: 0% 100%
+      transition: background-size .5s, color .5s
+    &:hover > a::after
+      background-size: 100% 100%
+  &__list > li > a
+    display: block
+    color: $accent-first
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 14px
+    text-decoration: none
+  &__toggle
+    display: none
+    position: relative
+    z-index: 1
+    user-select: none
+    border: 1px solid $block-bg_hover
+    background-color: $white
+    padding: 8px 4px
+    cursor: pointer
+    & span
+      display: block
+      position: relative
+      border-radius: 3px
+      z-index: 1
+      background: $block-bg_hover
+      width: 30px
+      height: 4px
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+    &:hover
+      background-color: $accent-first
+      border: 1px solid $accent-first
+      & > span
+        background: $white
+
+
+
+
+
+.register
   width: 100%
   height: 100%
-  z-index: 900
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  display: none
-  background: rgba(0, 0, 0, 0.7)
-  pointer-events: all
-  &.i-active
-    display: block
+  display: flex
+  align-items: center
+  justify-content: center
+  &__button
+    background-color: $accent-second
+    color: $white
+
+
+
+.bg-red
+  width: 600px
+  height: 600px
+  background-color: red
+
+  border-bottom: solid 1px white
+
+
 .mobile-sidebar
   width: 300px
   position: fixed
@@ -173,124 +292,6 @@
         margin-right: 10px
 
 
-
-.brand
-  display: flex
-  align-items: center
-  width: 100%
-  outline: none
-  height: 100%
-  &::before
-    content: ''
-    display: inline-block
-    width: 40px
-    height: 40px
-    border: 10px solid $accent-first
-    border-radius: 50%
-    margin: -4px 10px 0 0
-    background-color: $block-bg
-  &:hover
-    text-decoration: none
-  &__text
-    display: inline-block
-    white-space: pre-wrap
-    float: left
-    font-size: 24px
-    line-height: 32px
-    font-weight: 700
-    color: $accent-first
-
-
-
-
-
-
-.main-menu
-  display: flex
-  align-items: center
-  height: 100%
-  width: 100%
-  &__list
-    display: flex
-    margin: 0
-    padding: 0
-    list-style: none
-  &__list > li+li
-    margin-left: 10px
-  &__list > li
-    position: relative
-    flex-basis: auto
-    flex-grow: 1
-    text-align: center
-    & > a::after
-      content: ''
-      width: 100%
-      height: 2px
-      display: block
-      position: absolute
-      margin-top: 3px
-      background-image: linear-gradient($accent-first, $accent-first)
-      background-position: 50% 50%
-      background-repeat: no-repeat
-      background-size: 0% 100%
-      transition: background-size .5s, color .5s
-    &:hover > a::after
-      background-size: 100% 100%
-  &__list > li > a
-    display: block
-    color: $accent-first
-    text-transform: uppercase
-    font-weight: 600
-    font-size: 14px
-    text-decoration: none
-  &__toggle
-    display: none
-    position: relative
-    z-index: 1
-    user-select: none
-    border: 1px solid $block-bg_hover
-    background-color: $white
-    padding: 8px 4px
-    cursor: pointer
-    & span
-      display: block
-      position: relative
-      border-radius: 3px
-      z-index: 1
-      background: $block-bg_hover
-      width: 30px
-      height: 4px
-      margin-bottom: 5px
-      &:last-child
-        margin-bottom: 0
-    &:hover
-      background-color: $accent-first
-      border: 1px solid $accent-first
-      & > span
-        background: $white
-
-
-
-
-
-.register
-  width: 100%
-  height: 100%
-  display: flex
-  align-items: center
-  justify-content: center
-  &__button
-    background-color: $accent-second
-    color: $white
-
-
-
-.bg-red
-  width: 600px
-  height: 600px
-  background-color: red
-
-  border-bottom: solid 1px white
 
 
 @import media
