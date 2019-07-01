@@ -69,44 +69,58 @@
 
 
 
+
+
 .main-menu
   display: flex
-  align-items: center
   height: 100%
   width: 100%
   &__list
     display: flex
+    align-items: center
     margin: 0
     padding: 0
-    list-style: none
-  &__list > li+li
-    margin-left: 10px
+    height: 100%
   &__list > li
+    list-style-type: none
     position: relative
     flex-basis: auto
     flex-grow: 1
     text-align: center
-    & > a::after
-      content: ''
-      width: 100%
-      height: 2px
-      display: block
-      position: absolute
-      margin-top: 3px
-      background-image: linear-gradient($accent-first, $accent-first)
-      background-position: 50% 50%
-      background-repeat: no-repeat
-      background-size: 0% 100%
-      transition: background-size .5s, color .5s
-    &:hover > a::after
+    &:hover > button::after
       background-size: 100% 100%
-  &__list > li > a
-    display: block
-    color: $accent-first
-    text-transform: uppercase
-    font-weight: 600
-    font-size: 14px
-    text-decoration: none
+    & > button
+      display: block
+      background-color: transparent
+      border: none
+      outline: none
+      margin: 0
+      padding: 0
+      margin-bottom: 5px
+      &::after
+        content: ''
+        width: 100%
+        height: 2px
+        display: block
+        position: absolute
+        margin-top: 1px
+        background-image: linear-gradient($accent-first, $accent-first)
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 0% 100%
+        transition: background-size .5s, color .5s
+      &:active
+        border: none
+  & li + li
+    margin-left: 10px
+
+
+
+
+  & .slick-active
+    & > button::after
+      background-size: 100% 100%
+
   &__toggle
     display: none
     position: relative
